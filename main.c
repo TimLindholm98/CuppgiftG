@@ -74,13 +74,10 @@ void openDoor(SYSTEM_STATE *state)
     {
         CARD p = state->allCards[i];
 
-        if(p.access == true)
+        if(p.access == true && p.cardNumber == accessNumber)
         {
-            if(p.cardNumber == accessNumber)
-            {
                 openingDoor = true;
                 break;
-            }
         }
     }
     if(openingDoor == true)
